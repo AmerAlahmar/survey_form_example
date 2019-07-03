@@ -1,0 +1,99 @@
+html {
+    background-color: #a9d7d1;
+}
+
+#title {
+    text-align: center;
+}
+
+#main {
+    background-color: white;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.label {
+    margin-right: 10px;
+    text-align: end;
+}
+
+.field {
+    margin-left: 10px;
+    text-align: start;
+}
+
+#survey-form {
+    display: grid;
+    grid-template: "name-label name" "email-label email" "number-label number" "dropdown-label dropdown" "recommendation-label recommendation" "favorite-label favorite" "improvements-label improvements" "comments-label comments" "submit submit" / 1fr 1fr;
+}
+
+#name-label {
+    grid-area: name-label;
+}
+
+#name {
+    grid-area: name;
+}
+
+#email-label {
+    grid-area: email-label;
+}
+
+#email {
+    grid-area: email;
+}
+
+#number-label {
+    grid-area: number-label;
+}
+
+#number {
+    grid-area: number;
+}
+
+#dropdown-label {
+    grid-area: dropdown-label;
+}
+
+#dropdown {
+    grid-area: dropdown-label;
+}
+
+#dropdown-label {
+    grid-area: dropdown-label;
+}
+
+#dropdown {
+    grid-area: dropdown;
+}
+
+#favorite-label {
+    grid-area: favorite-label;
+}
+
+#favorite {
+    grid-area: favorite;
+}
+
+#improvements-label {
+    grid-area: improvements-label;
+}
+
+#improvements {
+    grid-area: improvements;
+}
+
+#comments-label {
+    grid-area: comments-label;
+}
+
+#comments {
+    grid-area: comments;
+}
+
+#submit {
+    grid-area: submit;
+}

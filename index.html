@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FCC: Survey Form</title>
+</head>
+
+<!--TODO: Fill all the args-->
+
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <h1 id="title">Survey Form</h1>
+    <main id="main">
+        <p id="description">Let us know how we can improve freeCodeCamp</p>
+        <form id="survey-form" action="">
+            <label id="name-label" class="label" for="">Name</label>
+            <input required id="name" class="field" type="text" name="" placeholder="">
+            <!--!Must be valide Email-->
+            <label id="email-label" class="label" for="">Email</label>
+            <input required id="email" class="field" type="email" name="" placeholder="">
+            <!--!Must be validated (ONLY NUMBERS)-->
+            <label id="number-label" class="label" for="">Number</label>
+            <input id="number" class="field" type="number" min="0" max="100" name="" placeholder="">
+            <!--! DROPDOWN-->
+            <label id="dropdown-label" class="label" for="">Dropdown</label>
+            <input id="dropdown" class="field" type="" name="">
+            <!--! All radios of same Q should have one name-->
+            <label id="recommendation-label" class="label" for="">Recommendation</label>
+            <input type="radio" class="field" name="" id="recommendation">
+            <!--! DROPDOWN-->
+            <label id="favorite-label" class="label" for="">Favorite</label>
+            <input id="favorite" class="field" type="" name="">
+            <label id="improvements-label" class="label" for="">Improvements</label>
+            <input type="checkbox" class="field" name="" value="" id="improvements">
+            <label id="comments-label" class="label" for="">Comments</label>
+            <textarea id="comments" class="field" name="" cols="30" rows="10"></textarea>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
