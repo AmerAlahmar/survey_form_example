@@ -1,99 +1,113 @@
 html {
     background-color: #a9d7d1;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    color: #3d3d3d
 }
 
 #title {
     text-align: center;
+    font-size: 3em;
+    color: black;
 }
 
 #main {
     background-color: white;
     border-radius: 8px;
-    width: 95%;
-    max-width: 1000px;
+    width: 80%;
+    max-width: 950px;
     margin: 0 auto;
+    padding: 20px;
     text-align: center;
-}
-
-.label {
-    margin-right: 10px;
-    text-align: end;
-}
-
-.field {
-    margin-left: 10px;
-    text-align: start;
 }
 
 #survey-form {
     display: grid;
-    grid-template: "name-label name" "email-label email" "number-label number" "dropdown-label dropdown" "recommendation-label recommendation" "favorite-label favorite" "improvements-label improvements" "comments-label comments" "submit submit" / 1fr 1fr;
+    grid-template: "name-label name" "email-label email" "number-label number" "dropdown-label dropdown" "recommendation-label recommendation" "favorite-label favorite" "improvements-label improvements" "comments-label comments" "submit submit" / minmax(200px, 350px) minmax(200px, 350px);
+    grid-gap: 35px 20px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-#name-label {
-    grid-area: name-label;
+.label {
+    text-align: end;
+    font-size: 1.2em;
 }
 
-#name {
-    grid-area: name;
+.field {
+    text-align: start;
 }
 
-#email-label {
-    grid-area: email-label;
+@media only screen and (max-width: 500px) {
+    #survey-form {
+        display: grid;
+        grid-template: "name-label" "name" "email-label" "email" "number-label" "number" "dropdown-label" "dropdown" "recommendation-label" "recommendation" "favorite-label" "favorite" "improvements-label" "improvements" "comments-label" "comments" "submit" / minmax(150px, 300px);
+        grid-row-gap: 15px;
+    }
+    .label {
+        text-align: start;
+    }
+    .field {
+        margin-bottom: 25px;
+        text-align: start;
+    }
 }
 
-#email {
-    grid-area: email;
+#description {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #2c2c2c;
 }
 
-#number-label {
-    grid-area: number-label;
+input.text,
+select {
+    box-sizing: border-box;
+    height: 35px;
+    padding: 3px;
+    border: 1px solid #A9A9A9;
+    border-radius: 4px;
+    font-size: 1.05em;
+    color: rgb(56, 56, 56)
 }
 
-#number {
-    grid-area: number;
+textarea {
+    box-sizing: border-box;
+    padding: 3px;
+    border: 1px solid #A9A9A9;
+    border-radius: 4px;
+    font-size: 1.05em;
+    color: rgb(56, 56, 56)
 }
 
-#dropdown-label {
-    grid-area: dropdown-label;
+input.text:focus,
+textarea:focus,
+select:focus {
+    border: 2px solid #02a18c;
 }
 
-#dropdown {
-    grid-area: dropdown-label;
+.option {
+    font-size: 1.05em;
+    color: rgb(56, 56, 56);
+    margin-bottom: 15px;
 }
 
-#dropdown-label {
-    grid-area: dropdown-label;
+input[type="radio"],
+input[type="checkbox"] {
+    transform: scale(1.2);
 }
 
-#dropdown {
-    grid-area: dropdown;
-}
-
-#favorite-label {
-    grid-area: favorite-label;
-}
-
-#favorite {
-    grid-area: favorite;
-}
-
-#improvements-label {
-    grid-area: improvements-label;
-}
-
-#improvements {
-    grid-area: improvements;
-}
-
-#comments-label {
-    grid-area: comments-label;
-}
-
-#comments {
-    grid-area: comments;
+.required-mark {
+    font-size: 0.7em;
 }
 
 #submit {
     grid-area: submit;
+    align-self: center;
+    justify-self: center;
+    width: 150px;
+    height: 45px;
+    font-size: 1.06em;
+    color: rgb(0, 0, 0);
+    background: #02a18c;
+    border: 1px solid #A9A9A9;
+    border-radius: 4px;
 }
